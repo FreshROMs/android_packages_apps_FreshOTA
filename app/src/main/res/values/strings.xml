@@ -1,39 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Updates</string>
-    <string name="changelog_url" translatable="false">http://downloads.blissroms.com/Changelog/CHANGELOG-bliss.txt</string>
+    <string name="OTA_SWUPDATE_TITLE">Software updates</string>
+    <string name="OTA_SWUPDATE_CHANGELOG_URL" translatable="false">https://ota.tensevntysevn.now.sh/OTA-Changelog.md</string>
 
-    <string name="main_update_available">New Update Available!</string>
-    <string name="main_update_finished">Download complete</string>
-    <string name="main_no_update_available">No Update Available</string>
+    <string name="OTA_SWUPDATE_MAIN_INSTALL_DOWNLOADING">Downloading update…</string>
+    <string name="OTA_SWUPDATE_MAIN_INSTALL_DOWNLOADING_DESC">FreshROMs %1$s %2$s</string>
+    <string name="OTA_SWUPDATE_MAIN_INSTALL_DOWNLOADING_TIME">Time left: %1$s</string>
+
+    <string name="OTA_SWUPDATE_MAIN_INSTALL_READY">FreshROMs %1$s is ready to install</string>
+    <string name="OTA_SWUPDATE_MAIN_INSTALL_READY_DESC">Your phone will restart after the update is installed. User interaction is required.</string>
+
+    <string name="OTA_SWUPDATE_MAIN_INSTALL_INFO">Update your phone and get new features</string>
+    <string name="OTA_SWUPDATE_MAIN_INSTALL_INFO_DESC">"Using mobile data to download may result in additional charges. Using Wi-Fi is recommended."</string>
+
+    <string name="OTA_SWUPDATE_MAIN_INSTALL_NOFOTA">Your software is up to date</string>
+
+    <string name="OTA_SWUPDATE_MAIN_LAST_UPDATE">Last successful update</string>
+    <string name="OTA_SWUPDATE_MAIN_LAST_UPDATE_DATE">%1$s at %2$s</string>
+
+    <string name="OTA_SWUPDATE_INSTALL_CH_HEADER">"What's New"</string>
+    <string name="OTA_SWUPDATE_INSTALL_CH_DESC">Find out what's included in this FreshROMs update.</string>
+
+    <string name="OTA_SWUPDATE_NOTI_FOTA_HEADER">Software update available</string>
+    <string name="OTA_SWUPDATE_NOTI_FOTA_DESC">FreshROMs %1$s %2$s is now available for your device!</string>
+
+    <string name="OTA_SWUPDATE_NOTI_FNSH_HEADER">Your phone has been updated</string>
+    <string name="OTA_SWUPDATE_NOTI_FNSH_DESC">Your device is successfully updated to %1$s. Enjoy a fresher FreshROMs!</string>
+
+    <string name="OTA_SWUPDATE_NOTI_FAIL_HEADER">Failed to update software</string>
+    <string name="OTA_SWUPDATE_NOTI_FAIL_DESC">Your device has failed to update. FreshROMs not updated to %1$s.</string>
+
+    <string name="OTA_SWUPDATE_APP_CUSTOM_DONATE">Donate</string>
+    <string name="OTA_SWUPDATE_APP_CUSTOM_BTC">Bitcoin</string>
+    <string name="OTA_SWUPDATE_APP_CUSTOM_FORUM">XDA Forum</string>
+    <string name="OTA_SWUPDATE_APP_CUSTOM_DISCORD">Discord Community</string>
+    <string name="OTA_SWUPDATE_APP_CUSTOM_GIT_ISSUE">File an Issue Ticket</string>
+    <string name="OTA_SWUPDATE_APP_CUSTOM_GIT_DISCUSSION">Discuss on GitHub</string>
+
     <string name="main_update_filename">Filename</string>
-    <string name="main_update_progress">Download Progress</string>
-    <string name="main_website">Website</string>
-    <string name="main_website_summary">Visit the official Team Bliss website</string>
-    <string name="main_donate">Donate</string>
-    <string name="main_donate_summary">Donate to Team Bliss!</string>
+
     <string name="main_tap_to_download">Tap to download</string>
     <string name="main_download_completed_details">Tap for details</string>
     <string name="main_tap_to_view_progress">Tap to view progress</string>
-    <string name="main_last_checked">Last checked for an update on:\n</string>
+    <string name="main_last_checked">Last checked for an update on:\n%1$s</string>
+
     <string name="main_addon">Addons</string>
-    <string name="main_addon_summary">Browse and download additional files for this ROM</string>
+    <string name="main_addon_summary">Enhance your FreshROMs experience</string>
 
     <!-- ROM Information -->
-    <string name="main_rom_information">About your device</string>
-    <string name="main_rom_name">System name:</string>
-    <string name="main_rom_version">Release version:</string>
-    <string name="main_rom_codename">ROM codename:</string>
-    <string name="main_rom_build_date">Build date:</string>
-    <string name="main_android_version">Android version:</string>
-    <string name="main_rom_developer">Maintainer(s):</string>
+    <string name="main_release_variant">FreshROMs %1$s %2$s %3$s</string>
+    <string name="main_release_version">Version: %1$s</string>
+    <string name="main_release_build_date">Build date: %1$s</string>
+    <string name="main_security_patch">Security patch level: %1$s</string>
+
+    <string name="main_rom_url">Downloads from %1$s</string>
+
+    <string name="main_rom_url_sourceforge" translatable="false">SourceForge</string>
+    <string name="main_rom_url_bitbucket" translatable="false">BitBucket</string>
+    <string name="main_rom_url_gitlab" translatable="false">GitLab</string>
+    <string name="main_rom_url_github" translatable="false">GitHub</string>
 
     <!-- Dialogs -->
-    <string name="main_not_compatible_title">Hold on!</string>
-    <string name="main_not_compatible_message">The current ROM set up is not configured to run with BlissOTA. Please contact the ROM maintainer to fix this issue.</string>
-    <string name="main_not_connected_title">Not connected</string>
-    <string name="main_not_connected_message">You are not connected to any network. Please enable Mobile Network or WiFi and try again.</string>
-    <string name="main_playstore_title">BitCoin</string>
+    <string name="main_not_compatible_title">Oof!</string>
+    <string name="main_not_compatible_message">This current release is not configured to receive over-the-air updates. Contact your ROM maintainer to fix this issue.</string>
+    <string name="main_not_connected_title">Unable to check for updates</string>
+    <string name="main_not_connected_message">Network not available. Try again later.</string>
+
+    <string name="main_playstore_title">Bitcoin</string>
     <string name="main_playstore_message">You do not have any available apps to handle the \"bitcoin:\" mime-type.\n\nWould you like to search the Google Play Store to find one?</string>
 
     <!-- Content Descriptions -->
@@ -42,7 +75,7 @@
     <string name="main_actionbar_button">Actionbar Buttons</string>
 
     <!-- Toast -->
-    <string name="main_release_ignored">Release skipped.</string>
+    <string name="main_release_ignored">Update postponed.</string>
 
     <!-- Generic strings -->
     <string name="cancel">Cancel</string>
@@ -54,8 +87,8 @@
     <string name="filename_separator">-</string>
     <string name="download">Download</string>
     <string name="install">Install</string>
-    <string name="downloading">Downloading&#8230;</string>
-    <string name="rebooting">Rebooting&#8230;</string>
+    <string name="downloading">Downloading update…</string>
+    <string name="rebooting">Rebooting…</string>
     <string name="information">Information</string>
     <string name="update_available">ROM update available</string>
     <string name="ignore">Ignore</string>
@@ -107,7 +140,10 @@
     <string name="available_downloading">Downloading&#8230;</string>
     <string name="are_you_sure">Are you sure?</string>
     <string name="available_delete_confirm_message">Are you sure you want to delete the downloaded file?</string>
-    <string name="available_reboot_confirm">Would you like to reboot now?</string>
+
+    <string name="available_reboot_confirm">Interaction required to continue update</string>
+    <string name="available_reboot_confirm_message">Because of Magisk \"taking over\" the recovery, you will need to hold the recovery button combination of your device (usually power button and volume up) to fully initiate the update. You won\'t be able to use your phone during the update, even for emergency calls.\nWould you like to reboot now?</string>
+
     <string name="available_url_error">URL Error: Please see your ROM developer</string>
     <string name="available_reboot_manual_title">Please reboot now</string>
     <string name="available_reboot_manual_message">Please reboot to recovery and flash your ROM.\n\nYou can find it in /sdcard/Downloads</string>
@@ -116,7 +152,7 @@
 
     <!-- Preferences -->
     <string name="preferences_name">Settings</string>
-    <string name="download_folder" translatable="false">/storage/emulated/0/Download</string>
+    <string name="download_folder" translatable="false">/storage/emulated/0/Download/Fresh</string>
     <string name="list_summary" translatable="false">%s</string>
     <string name="twrp_ors_cat" translatable="false">OpenRecoveryScript</string>
     <string name="twrp_ors_title">Enable OpenRecoveryScript</string>
@@ -153,6 +189,7 @@
     <string name="notifications_sound">Sound</string>
     <string name="notifications_vibrate">Vibrate</string>
     <string name="silent_ringtone">Silent</string>
+    
     <string name="notification_ignore_release_title">Skip update</string>
     <string name="notification_ignoring_release">Currently skipping version: </string>
     <string name="notification_not_ignoring_release">You are not skipping any updates</string>

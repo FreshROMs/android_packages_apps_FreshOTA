@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?><!--
- 	Copyright (C) 2015 Nicholas Chum (nicholaschum) and Matt Booth (Kryten2k35).
+ 	UX Copyright (C) 2021 John Vincent (TenSeventy7) and Yanndroid.
+ 	Code Copyright (C) 2015 Nicholas Chum (nicholaschum) and Matt Booth (Kryten2k35).
  
  	Licensed under the Attribution-NonCommercial-ShareAlike 4.0 International 
  	(the "License") you may not use this file except in compliance with the License.
@@ -15,11 +16,12 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="blissroms.updates"
-          android:versionCode="24"
-          android:versionName="7.2">
+          package="io.tensevntysevn.ota"
+          android:versionCode="202101"
+          android:versionName="12.1.2.9-B1">
 
-    <uses-sdk android:maxSdkVersion="25"/>
+    <uses-sdk android:minSdkVersion="28"/>
+    <uses-sdk android:targetSdkVersion="25"/>
 
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -40,15 +42,15 @@
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
 
     <application
-        android:name="blissroms.updates.utils.OtaUpdates"
+        android:name="io.tensevntysevn.ota.SoftwareUpdates"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.Light"
         android:uiOptions="splitActionBarWhenNarrow">
 
         <activity
-            android:name="blissroms.updates.activities.MainActivity"
+            android:name="io.tensevntysevn.ota.activities.MainActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
@@ -58,32 +60,47 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="blissroms.updates.activities.AvailableActivity"
+            android:name="io.tensevntysevn.ota.activities.AvailableActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="blissroms.updates.activities.AddonActivity"
+            android:name="io.tensevntysevn.ota.activities.AddonActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="blissroms.updates.activities.SettingsActivity"
+            android:name="io.tensevntysevn.ota.activities.SettingsActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="@string/preferences_name"
             android:screenOrientation="portrait"/>
 
         <receiver
-            android:name="blissroms.updates.receivers.AppReceiver"
+            android:name="io.tensevntysevn.ota.receivers.BootReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="io.tensevntysevn.ota.receivers.DownloadReceiver"
             android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
                 <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED"/>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                <action android:name="com.ota.update.MANIFEST_CHECK_BACKGROUND"/>
-                <action android:name="com.ota.update.START_UPDATE_CHECK"/>
             </intent-filter>
         </receiver>
+
+        <receiver
+            android:name="io.tensevntysevn.ota.receivers.TnsOtaReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="tns.ota.intent.action.MANIFEST_CHECK_BACKGROUND"/>
+                <action android:name="tns.ota.intent.action.START_UPDATE_CHECK"/>
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

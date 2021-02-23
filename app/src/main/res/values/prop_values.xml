@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="prop_name" translatable="false">ro.ota.systemname</string>
-    <string name="prop_version" translatable="false">ro.ota.version</string>
+    <string name="prop_version" translatable="false">ro.fresh.ota.version</string>
+
+    <string name="OTA_SWUPDATE_PROP_API_URL" translatable="false">ro.fresh.ota.api</string>
+    <string name="OTA_SWUPDATE_PROP_VERSION" translatable="false">ro.fresh.ota.version</string>
+    <string name="OTA_SWUPDATE_PROP_BRANCH" translatable="false">ro.fresh.build.branch</string>
+
     <string name="prop_date" translatable="false">ro.build.date</string>
     <string name="prop_release" translatable="false">ro.build.version.release</string>
     <string name="prop_system_model" translatable="false">ro.product.device</string>
