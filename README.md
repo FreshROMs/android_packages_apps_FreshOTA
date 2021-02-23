@@ -1,41 +1,21 @@
-# TeamBlissOTA - Updater for custom ROMs
+# FreshOTA - Over-the-Air Update App for FreshROMs
 
-With this new version, it now requests Marshmallow permissions at runtime, and if denied, it will close the app.
+A useful tool to help FreshROM maintainers provide OTA updates to users. With this new version, it now requests proper runtime permissions, and if denied, it will close the app.
 
+The application is forked from TeamBliss' OTA Updater app. **The application, notably its UX, is currently a work-in-progress.**
 
-# Maintainers, your ROM must be set up to include these or else it would not work properly:
+## Contributing
 
-1. A place to host your ROM addons to be placed into ota.xml (Default goes to http://downloads.blissroms.com/Add-ons/addons.xml but you can make your own) [Template: http://pastebin.com/B7Sstbeg]
-3. A place to host your update info (Add it into http://downloads.blissroms.com/BlissPop/Official/modelname/ota.xml)
-3. Build.prop entries (To ensure compatibility/non-compatible dialogs from showing up)
+This repository is open for contributions! If you would like to report issues, submit pull requests, or suggest new features, never hesitate to file one. :)
 
-# OTA.XML Template
+## Instructions to compile this app yourself
 
-As of April 1st, 2015, the Bliss build code will have ota.xml support to structure it for you, as well as place it in your correct directory.
+If you choose to compile this app from scratch, see [here](https://github.com/MatthewBooth/OTAUpdates/blob/stable/README.md).
 
-# ADDONS.XML Template
-
-This file needs to be added into http://downloads.blissroms.com/Add-ons/, please look at http://downloads.blissroms.com/Add-ons/addons.xml on how to structure it. You can make your own. The final link will be added into the bottom of ota.xml
-
-# BUILD.PROP Entries
-
-If you haven't already, please merge http://review.blissroms.com:8081/#/c/78/ to get the build.prop entries "ro.ota.systemname, ro.ota.version, ro.ota.device, ro.ota.manifest"
-
-Example:
-ro.ota.systemname=BlissPop     (this must match up with the template's romname tags)
-ro.ota.version=2016010100      (this goes by YYYYMMDDXX, where XX is the build number)
-ro.ota.device=scorpion         (the model name of your device)
-ro.ota.manifest=               (link of your ota.xml file, must be a direct link to the .xml file)
-
-
-# Instructions to compile this app yourself
-
-https://github.com/Kryten2k35/OTAUpdates/blob/stable/README.md
-
-# Licencing
+## Licensing
 
 This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). A copy of the licence can be obtained [here](http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
 
-This licence is chosen because it gives people the rights to clone this project and freely use it in their ROM or application, but only so long as they are sharing it in the same manner, and not going to publish it for commercial uses. I.E. This is free to use and modify (so long as you share any changes under the same licence), but you can't take it and sell it.
+This licence is chosen because it gives people the rights to clone this project and freely use it in their ROM or application, but only so long as they are sharing it in the same manner, and not going to publish it for commercial uses. i.e. This is free to use and modify (so long as you share any changes under the same licence), but you can't take it and sell it.
 
 Other parts of this project (Bypass, cardsview) have their own licences and are not affected by this one.
