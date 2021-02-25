@@ -75,7 +75,7 @@ public class LoadUpdateManifest extends AsyncTask<Void, Void, Void> implements C
             URL api = new URL(
                 TnsOtaUtils.getProp(getResources().getString(R.string."OTA_SWUPDATE_PROP_API_URL")) + "/"
                 + ROM_CODE + "/"
-                + TnsOtaUtils.getDeviceProduct() + "/"
+                + TnsOtaUtils.getDeviceCodename() + "/"
                 + TnsOtaUtils.getProp(getResources().getString(R.string."OTA_SWUPDATE_PROP_BRANCH")) + "/"
                 + TnsOtaUtils.getProp(getResources().getString(R.string."OTA_SWUPDATE_PROP_VERSION")) + "/");
 
